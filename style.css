@@ -14,15 +14,21 @@
 --accent:hsl(218, 74%, 64%);
 }
 
+.favicon:focus {
+    filter: invert(61%) sepia(51%) saturate(738%) hue-rotate(185deg) brightness(96%) contrast(93%);
+}
+
 /*Header styles*/
+
 nav {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background-color:hsl(0, 0%, 95%);
+     background-color:hsl(0, 0%, 95%); 
     box-shadow:0px 2px 4px 5px rgba(0,0,0,0.1);
-    padding:1.5rem 5%;
+    padding:1.5rem 2%;
     height:60px;   
+    transition:all 0.3s ease-out;
 }
 
 .logo {
@@ -30,11 +36,13 @@ nav {
     font-weight:bold;
     color:hsl(249, 97%, 47%);
     padding:0.5rem 1rem;
+    min-width:max-content;
+    
     
 }
 
 .nav-links {
-     display:flex;
+    display:flex;
     align-items:center;
     list-style:none;
     padding:10px;
@@ -77,8 +85,10 @@ nav {
 .cart {
     position:relative;
     display:inline-block;
+   
 }
 .cart-icon {
+    position:relative;
     display:block;
     width:30px;
      height:30px;
@@ -86,21 +96,51 @@ nav {
 
 .cart-icon:hover,
 .cart-icon:focus {
+
     transform:scale(1.1);
     transition:transform 0.3s ease-out;
     filter: invert(61%) sepia(51%) saturate(738%) hue-rotate(185deg) brightness(96%) contrast(93%);
 
 }
 
-
-
-
-
-
-
-
-
 /* Body */
 body {
+    
+    font-family:'Bitcount Prop Single', sans-serif;
+    padding:0.5rem;
+    overflow-x:hidden;
+}
+
+/* Hero Section */
+.hero {
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    background-color:hsl(241, 70%, 37%);
+    padding:8rem 5% ; 
+    min-height:100vh;
+}
+    
+.hero-section {
+padding:2rem;
+background-color:red;
+flex:1 1 400px;
+
+}
+.hero-section p{
+    font-size:1.5rem;
+    max-width:600px;
+}
+
+.hero-section .btn {
+    display:grid;
+    place-items:center;
+    font-size:1.7rem;
+    border-radius:5rem;
+    padding:.5rem 1rem;
+    align-items:center;
+    background-color: var(--accent);
+    border:none;
     font-family:'Bitcount Prop Single', sans-serif;
 }
+    
