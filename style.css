@@ -11,7 +11,7 @@
 }
 
 :root {
---accent:hsl(218, 74%, 64%);
+--accent:hsl(205, 93%, 67%);
 }
 
 .favicon:focus {
@@ -50,6 +50,17 @@ nav {
    
 }
 
+@media (max-width: 768px) {
+  /* Hide the desktop navigation links entirely */
+  .nav-links {
+    display: none; 
+  }
+
+  /* Reveal the  cart icon instead */
+  .cart-icon {
+    display: block;
+  }
+}
 .nav-links li a {
     position: relative;
     text-decoration:none;
@@ -116,31 +127,52 @@ body {
     display:flex;
     align-items:center;
     justify-content:space-around;
-    background-color:hsl(241, 70%, 37%);
     padding:8rem 5% ; 
     min-height:100vh;
+    
 }
     
 .hero-section {
-padding:2rem;
-background-color:red;
+display:flex;
+padding:1.5rem;
 flex:1 1 400px;
-
+flex-direction:column;
+gap:2rem;
+}
+.hero-section .h1{
+    font-size:3rem;
 }
 .hero-section p{
     font-size:1.5rem;
     max-width:600px;
+   
 }
 
 .hero-section .btn {
-    display:grid;
+    max-width:max-content;
     place-items:center;
     font-size:1.7rem;
     border-radius:5rem;
-    padding:.5rem 1rem;
+    padding:1rem 2rem;
     align-items:center;
     background-color: var(--accent);
     border:none;
     font-family:'Bitcount Prop Single', sans-serif;
 }
     
+.btn:hover{
+    background-color:hsla(203, 83%, 60%, 0.951);
+    box-shadow:0px 2px 4px 5px hsla(209, 84%, 63%, 0.621);
+}
+.btn:active{
+    transform:scale(0.95);
+    box-shadow:0px 2px 4px 5px hsla(214, 83%, 34%, 0.953);
+}
+
+.d-box {
+    background-color:hsl(0, 0%, 99%);
+    width:80vh;
+    height:75vh;
+    border-radius:1rem;
+    box-shadow:0px 2px 4px 5px rgba(0,0,0,0.1);
+}
